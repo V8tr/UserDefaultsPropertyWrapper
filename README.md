@@ -11,25 +11,26 @@ A sample project showing how to implement a `UserDefaults` property wrapper in S
 Usage:
 
 ```swift
-// Create a new key
+// Declare a new key
 extension Key {
     static let isFirstLaunch: Key = "isFirstLaunch"
 }
 
-// Adapter on top of `UserDefaults`
 struct Storage {
     // Use the property wrapper to add new value to `UserDefaults`
     @UserDefault(key: .isFirstLaunch)
     var isFirstLaunch: Bool?
 }
 
+// Initialize the storage
 var storage = Storage()
 
-// Observe property changes
+// Observe user default changes
 var observation = storage.$isFirstLaunch.observe { old, new in
     print("Changed from: \(old) to \(new)")
 }
 
+// Make some changes
 storage.isFirstLaunch = true
 storage.isFirstLaunch?.toggle()
 ````
