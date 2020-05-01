@@ -6,7 +6,7 @@
 
 # UserDefaultsPropertyWrapper
 
-A sample project showing how to implement a `UserDefaults` property wrapper in Swift. The property wrapper has statically typed keyes and provides a conveniece to observe `UserDefaults` changes.
+A sample project showing how to implement a `UserDefaults` property wrapper in Swift. The property wrapper has statically typed keys and provides a conveniece to observe `UserDefaults` changes.
 
 Usage:
 
